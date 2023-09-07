@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  PayPalMessagingSpike
-//
-//  Created by Jax DesMarais-Leder on 9/6/23.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
