@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE6E01482AAA222D00170C09 /* PayPalMessages.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; };
-		BE6E01492AAA222D00170C09 /* PayPalMessages.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEEE3F592AA8C9CF00B9DBBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F582AA8C9CF00B9DBBD /* AppDelegate.swift */; };
 		BEEE3F5B2AA8C9CF00B9DBBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F5A2AA8C9CF00B9DBBD /* SceneDelegate.swift */; };
 		BEEE3F5D2AA8C9CF00B9DBBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F5C2AA8C9CF00B9DBBD /* ViewController.swift */; };
 		BEEE3F602AA8C9CF00B9DBBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEE3F5E2AA8C9CF00B9DBBD /* Main.storyboard */; };
 		BEEE3F622AA8C9D900B9DBBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEE3F612AA8C9D900B9DBBD /* Assets.xcassets */; };
 		BEEE3F652AA8C9DA00B9DBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEE3F632AA8C9DA00B9DBBD /* LaunchScreen.storyboard */; };
+		BEFD048D2AB4EBE900AD3EB4 /* PayPalMessages.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; };
+		BEFD048E2AB4EBE900AD3EB4 /* PayPalMessages.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BE6E014A2AAA222D00170C09 /* Embed Frameworks */ = {
+		BEFD048F2AB4EBE900AD3EB4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BE6E01492AAA222D00170C09 /* PayPalMessages.xcframework in Embed Frameworks */,
+				BEFD048E2AB4EBE900AD3EB4 /* PayPalMessages.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE6E01482AAA222D00170C09 /* PayPalMessages.xcframework in Frameworks */,
+				BEFD048D2AB4EBE900AD3EB4 /* PayPalMessages.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 				BEEE3F512AA8C9CF00B9DBBD /* Sources */,
 				BEEE3F522AA8C9CF00B9DBBD /* Frameworks */,
 				BEEE3F532AA8C9CF00B9DBBD /* Resources */,
-				BE6E014A2AAA222D00170C09 /* Embed Frameworks */,
+				BEFD048F2AB4EBE900AD3EB4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

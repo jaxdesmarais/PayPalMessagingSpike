@@ -5,6 +5,16 @@ class ViewController: UIViewController, PayPalMessageViewEventDelegate, PayPalMe
 
     var payPalMessageView: PayPalMessageView?
 
+    // outstanding questions
+    // - do we want to use the client/request pattern? it doesn't really make a ton of sense with just UI?
+    // - do we want to handle constraints or do we want merchants to handle their own constraints
+    // - what do we need to wrap or not wrap for v1? everything? only some classes?
+    // - class name: PayPalCreditMessage____
+
+    // thoughts
+    // - merchants should pass in APIClient and we should obfuscate clientID from them completely
+    // - everything in PayPalMessageData and PayPalMessageStyle should be wrapped in a request vs separate objects
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -12,6 +22,7 @@ class ViewController: UIViewController, PayPalMessageViewEventDelegate, PayPalMe
             data: PayPalMessageData(
                 clientID: "ASPBQAggBcUvZJ0kFFBizjYapdjokGMcAzBFoC0xIAYY-4iuJH3NxAgkdUEyQ6oCPQiKNRZaWUogS0d6",
                 amount: 2.0,
+                offerType: .payLaterLongTerm,
                 environment: .sandbox
             ),
             style: PayPalMessageStyle(
@@ -22,7 +33,6 @@ class ViewController: UIViewController, PayPalMessageViewEventDelegate, PayPalMe
         )
 
         payPalMessageView = PayPalMessageView(config: messageConfig, stateDelegate: self, eventDelegate: self)
-        // maybe needs a delegate
 
         payPalMessageView?.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(payPalMessageView!)
