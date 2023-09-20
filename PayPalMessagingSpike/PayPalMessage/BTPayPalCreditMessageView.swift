@@ -10,6 +10,8 @@ import PayPalMessages
         // Dictionary key used for apiClient to retrieve the clientId
         static let clientID = "clientId"
         
+        static let productionEnvironment = "production"
+        
         //TODO: // ideally we can use our own client ID here, but it's not working currently
         static let temporaryClientID = "ASPBQAggBcUvZJ0kFFBizjYapdjokGMcAzBFoC0xIAYY-4iuJH3NxAgkdUEyQ6oCPQiKNRZaWUogS0d6"
     }
@@ -53,7 +55,7 @@ import PayPalMessages
                     clientID: Constants.temporaryClientID , // ideally we can use our own client ID here, but it's not working currently
                     amount: request?.amount,
                     offerType: request?.offerType.offerTypeRawValue,
-                    environment: configuration.environment == "production" ? .live : .sandbox
+                    environment: configuration.environment == Constants.productionEnvironment ? .live : .sandbox
                 ),
                 style: PayPalMessageStyle(
                     logoType: .primary,
