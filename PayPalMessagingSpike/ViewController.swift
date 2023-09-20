@@ -7,7 +7,6 @@ class ViewController: UIViewController, PayPalMessageViewEventDelegate, PayPalMe
 
     // outstanding questions
     // - do we want to use the client/request pattern? it doesn't really make a ton of sense with just UI?
-    // - do we want to handle constraints or do we want merchants to handle their own constraints
     // - what do we need to wrap or not wrap for v1? everything? only some classes?
     // - class name: PayPalCreditMessage____
 
