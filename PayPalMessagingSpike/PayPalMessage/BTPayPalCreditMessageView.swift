@@ -2,7 +2,7 @@ import UIKit
 import BraintreeCore
 import PayPalMessages
 
-@objc public class BTPayPalCreditMessageView: UIControl {
+@objc public class BTPayPalCreditMessageView: UIView {
     private enum Constants {
         // Dictionary key used for apiClient for paypal vendor
         static let paypal = "paypal"
