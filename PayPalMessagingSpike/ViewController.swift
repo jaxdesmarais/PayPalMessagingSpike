@@ -2,7 +2,7 @@ import UIKit
 import BraintreeCore
 import PayPalMessages
 
-class ViewController: UIViewController, PayPalMessageViewEventDelegate, PayPalMessageViewStateDelegate {
+class ViewController: UIViewController {
 
     var payPalMessageView: BTPayPalCreditMessageView?
 
@@ -14,7 +14,13 @@ class ViewController: UIViewController, PayPalMessageViewEventDelegate, PayPalMe
         request.offerType = .payLaterLongTerm
         request.amount = 2.0
 
-        payPalMessageView = BTPayPalCreditMessageView(apiClient: apiClient, paypalCreditMessageRequest: request)
+        payPalMessageView = BTPayPalCreditMessageView(apiClient: apiClient)
+        payPalMessageView?.createView(with: request) { error in
+            if let error {
+                // do something if there is an error
+                print(error.localizedDescription)
+            }
+        }
 
         payPalMessageView?.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(payPalMessageView!)
@@ -25,27 +31,5 @@ class ViewController: UIViewController, PayPalMessageViewEventDelegate, PayPalMe
             payPalMessageView!.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             payPalMessageView!.heightAnchor.constraint(equalToConstant: 80)
         ])
-    }
-
-    // MARK: - Delegates
-
-    func onClick(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
-        // no-op
-    }
-
-    func onApply(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
-        // no-op
-    }
-
-    func onLoading(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
-        // no-op
-    }
-
-    func onSuccess(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
-        // no-op
-    }
-
-    func onError(_ paypalMessageView: PayPalMessages.PayPalMessageView, error: PayPalMessages.PayPalMessageError) {
-        // no-op
     }
 }
