@@ -5,7 +5,7 @@ import Foundation
     public var amount: Double?
 
     /// Message screen location (e.g. product, cart, home)
-    public var placement: BTPayPalMessagePlacement?
+    public var placement: BTPayPalMessagePlacement = .none
 
     /// Preferred message offer to display
     public var offerType: BTPayPalMessageOfferType = .none
@@ -13,10 +13,22 @@ import Foundation
     /// Consumer's country (Integrations must be approved by PayPal to use this option)
     public var buyerCountry: String?
 
-    // PPCP ONLY IF NEEDED
-    /// PayPal encrypted merchant ID. For partner integrations only.
-    public var merchantID: String?
+//    // PPCP ONLY IF NEEDED
+//    /// PayPal encrypted merchant ID. For partner integrations only.
+//    public var merchantID: String?
+//
+//    /// Partner BN Code / Attribution ID assigned to the account. For partner integrations only.
+//    public var partnerAttributionID: String?
 
-    /// Partner BN Code / Attribution ID assigned to the account. For partner integrations only.
-    public var partnerAttributionID: String?
+    init(
+        amount: Double? = nil,
+        placement: BTPayPalMessagePlacement = .none,
+        offerType: BTPayPalMessageOfferType = .none,
+        buyerCountry: String? = nil
+    ) {
+        self.amount = amount
+        self.placement = placement
+        self.offerType = offerType
+        self.buyerCountry = buyerCountry
+    }
 }

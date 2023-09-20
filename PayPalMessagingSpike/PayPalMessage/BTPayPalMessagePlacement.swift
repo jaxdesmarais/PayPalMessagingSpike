@@ -4,18 +4,25 @@ import PayPalMessages
 /// Message location within an application
 @objc public enum BTPayPalMessagePlacement: Int {
 
+    /// None
+    case none
+
     /// Home view
     case home
+    
     /// Category view displaying multiple products
     case category
+    
     /// Individual product view
     case product
+    
     /// Shopping cart view
     case cart
+    
     /// Checkout view
     case payment
 
-    var placementRawValue: PayPalMessagePlacement {
+    var placementRawValue: PayPalMessagePlacement? {
         switch self {
         case .home:
             return .home
@@ -27,6 +34,8 @@ import PayPalMessages
             return .cart
         case .payment:
             return .payment
+        default:
+            return nil
         }
     }
 }
