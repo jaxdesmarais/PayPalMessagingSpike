@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8EA84FE2ABB7E0100569635 /* PayPalMessages.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EA84FD2ABB7E0100569635 /* PayPalMessages.xcframework */; };
+		B8EA84FF2ABB7E0100569635 /* PayPalMessages.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8EA84FD2ABB7E0100569635 /* PayPalMessages.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE0AD9EF2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9EE2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift */; };
 		BE0AD9F12ABB29E600C7CA59 /* BTPayPalMessagePlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9F02ABB29E600C7CA59 /* BTPayPalMessagePlacement.swift */; };
 		BE0AD9F32ABB2AB800C7CA59 /* BTPayPalMessageOfferType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9F22ABB2AB800C7CA59 /* BTPayPalMessageOfferType.swift */; };
@@ -28,18 +30,16 @@
 		BEEE3F602AA8C9CF00B9DBBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEE3F5E2AA8C9CF00B9DBBD /* Main.storyboard */; };
 		BEEE3F622AA8C9D900B9DBBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEE3F612AA8C9D900B9DBBD /* Assets.xcassets */; };
 		BEEE3F652AA8C9DA00B9DBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEE3F632AA8C9DA00B9DBBD /* LaunchScreen.storyboard */; };
-		BEFD048D2AB4EBE900AD3EB4 /* PayPalMessages.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; };
-		BEFD048E2AB4EBE900AD3EB4 /* PayPalMessages.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BEFD048F2AB4EBE900AD3EB4 /* Embed Frameworks */ = {
+		B8EA85002ABB7E0100569635 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BEFD048E2AB4EBE900AD3EB4 /* PayPalMessages.xcframework in Embed Frameworks */,
+				B8EA84FF2ABB7E0100569635 /* PayPalMessages.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B8EA84FD2ABB7E0100569635 /* PayPalMessages.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PayPalMessages.xcframework; path = ../../../Downloads/PayPalMessages.xcframework; sourceTree = "<group>"; };
 		BE0AD9EE2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessageRequest.swift; sourceTree = "<group>"; };
 		BE0AD9F02ABB29E600C7CA59 /* BTPayPalMessagePlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalMessagePlacement.swift; sourceTree = "<group>"; };
 		BE0AD9F22ABB2AB800C7CA59 /* BTPayPalMessageOfferType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalMessageOfferType.swift; sourceTree = "<group>"; };
@@ -73,8 +74,8 @@
 				BED7C4B42ABB2D0400EF8550 /* BraintreeCore in Frameworks */,
 				BED7C4BA2ABB2D0400EF8550 /* BraintreePayPal in Frameworks */,
 				BED7C4C22ABB2D0400EF8550 /* BraintreeVenmo in Frameworks */,
+				B8EA84FE2ABB7E0100569635 /* PayPalMessages.xcframework in Frameworks */,
 				BED7C4AE2ABB2D0400EF8550 /* BraintreeAmericanExpress in Frameworks */,
-				BEFD048D2AB4EBE900AD3EB4 /* PayPalMessages.xcframework in Frameworks */,
 				BED7C4B02ABB2D0400EF8550 /* BraintreeApplePay in Frameworks */,
 				BED7C4B22ABB2D0400EF8550 /* BraintreeCard in Frameworks */,
 				BED7C4BC2ABB2D0400EF8550 /* BraintreePayPalNativeCheckout in Frameworks */,
@@ -134,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				BE6E01442AA91FD400170C09 /* PayPalMessages.xcframework */,
+				B8EA84FD2ABB7E0100569635 /* PayPalMessages.xcframework */,
 				BE6E013D2AA90EE900170C09 /* PayPalMessages 2.xcframework */,
 				BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */,
 			);
@@ -150,7 +152,7 @@
 				BEEE3F512AA8C9CF00B9DBBD /* Sources */,
 				BEEE3F522AA8C9CF00B9DBBD /* Frameworks */,
 				BEEE3F532AA8C9CF00B9DBBD /* Resources */,
-				BEFD048F2AB4EBE900AD3EB4 /* Embed Frameworks */,
+				B8EA85002ABB7E0100569635 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
