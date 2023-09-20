@@ -8,7 +8,7 @@ import Foundation
     public var placement: BTPayPalMessagePlacement?
 
     /// Preferred message offer to display
-    public var offerType: BTPayPalMessageOfferType?
+    public var offerType: BTPayPalMessageOfferType = .none
 
     /// Consumer's country (Integrations must be approved by PayPal to use this option)
     public var buyerCountry: String?
