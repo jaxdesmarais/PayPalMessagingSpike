@@ -28,6 +28,7 @@
 		BED7C4C32ABC7B3800EF8550 /* PayPalMessages.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; };
 		BED7C4C42ABC7B3800EF8550 /* PayPalMessages.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BED7C4C52ABC7B4E00EF8550 /* PayPalMessages.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; };
+		BED7C4C72ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7C4C62ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift */; };
 		BEEE3F592AA8C9CF00B9DBBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F582AA8C9CF00B9DBBD /* AppDelegate.swift */; };
 		BEEE3F5B2AA8C9CF00B9DBBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F5A2AA8C9CF00B9DBBD /* SceneDelegate.swift */; };
 		BEEE3F5D2AA8C9CF00B9DBBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F5C2AA8C9CF00B9DBBD /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		BE0AD9F52ABB2BAD00C7CA59 /* BTPayPalCreditMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessageView.swift; sourceTree = "<group>"; };
 		BE6E013D2AA90EE900170C09 /* PayPalMessages 2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "PayPalMessages 2.xcframework"; path = "../../Downloads/PayPalMessages 2.xcframework"; sourceTree = "<group>"; };
 		BE6E01442AA91FD400170C09 /* PayPalMessages.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PayPalMessages.xcframework; path = "../../Downloads/ios-native-messages-main/PayPalMessages.xcframework"; sourceTree = "<group>"; };
+		BED7C4C62ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessageDelegate.swift; sourceTree = "<group>"; };
 		BEEE3F552AA8C9CF00B9DBBD /* PayPalMessagingSpike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayPalMessagingSpike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEE3F582AA8C9CF00B9DBBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEEE3F5A2AA8C9CF00B9DBBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,13 +101,14 @@
 		BE0AD9F42ABB2B4000C7CA59 /* PayPalMessage */ = {
 			isa = PBXGroup;
 			children = (
+				B8EA85032ABBB5BF00569635 /* BTPayPalCreditMessageColor.swift */,
+				BED7C4C62ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift */,
+				B8EA85052ABBB69300569635 /* BTPayPalCreditMessageLogoType.swift */,
 				BE0AD9F22ABB2AB800C7CA59 /* BTPayPalCreditMessageOfferType.swift */,
 				BE0AD9F02ABB29E600C7CA59 /* BTPayPalCreditMessagePlacement.swift */,
 				BE0AD9EE2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift */,
-				BE0AD9F52ABB2BAD00C7CA59 /* BTPayPalCreditMessageView.swift */,
 				B8EA85012ABBB4A300569635 /* BTPayPalCreditMessageTextAlignment.swift */,
-				B8EA85032ABBB5BF00569635 /* BTPayPalCreditMessageColor.swift */,
-				B8EA85052ABBB69300569635 /* BTPayPalCreditMessageLogoType.swift */,
+				BE0AD9F52ABB2BAD00C7CA59 /* BTPayPalCreditMessageView.swift */,
 			);
 			path = PayPalMessage;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				BE0AD9F62ABB2BAD00C7CA59 /* BTPayPalCreditMessageView.swift in Sources */,
 				BEEE3F592AA8C9CF00B9DBBD /* AppDelegate.swift in Sources */,
 				BE0AD9EF2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift in Sources */,
+				BED7C4C72ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift in Sources */,
 				BE0AD9F32ABB2AB800C7CA59 /* BTPayPalCreditMessageOfferType.swift in Sources */,
 				BEEE3F5B2AA8C9CF00B9DBBD /* SceneDelegate.swift in Sources */,
 				B8EA85022ABBB4A300569635 /* BTPayPalCreditMessageTextAlignment.swift in Sources */,

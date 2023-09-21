@@ -20,7 +20,8 @@ class ViewController: UIViewController {
         request.textAlignment = .center
 
         let payPalMessageView = BTPayPalCreditMessageView(apiClient: apiClient)
-        
+        payPalMessageView.delegate = self
+
         payPalMessageView.createView(with: request) { [weak self] messageView, error in
             guard let self = self, let messageView = messageView, error == nil else {
                 // do something if there is an error
@@ -38,5 +39,28 @@ class ViewController: UIViewController {
                 messageView.heightAnchor.constraint(equalToConstant: 80)
             ])
         }
+    }
+}
+
+extension ViewController: BTPayPalCreditMessageDelegate {
+
+    func onClick(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+        print("DELEGATE: onClick fired")
+    }
+    
+    func onApply(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+        print("DELEGATE: onApply fired")
+    }
+    
+    func onLoading(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+        print("DELEGATE: onLoading fired")
+    }
+    
+    func onSuccess(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+        print("DELEGATE: onSuccess fired")
+    }
+    
+    func onError(_ payPalCreditMessageView: BTPayPalCreditMessageView, error: Error) {
+        print("DELEGATE: onError fired with \(error.localizedDescription)")
     }
 }

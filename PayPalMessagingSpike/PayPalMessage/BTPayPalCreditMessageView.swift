@@ -2,13 +2,16 @@ import UIKit
 import BraintreeCore
 import PayPalMessages
 
-@objc public class BTPayPalCreditMessageView: UIView {
-    private enum Constants {
+private enum Constants {
 
-        // TODO: ideally we can use our own client ID here, but it's not working currently
-        static let temporaryClientID = "ASPBQAggBcUvZJ0kFFBizjYapdjokGMcAzBFoC0xIAYY-4iuJH3NxAgkdUEyQ6oCPQiKNRZaWUogS0d6"
-    }
-    
+    // TODO: ideally we can use our own client ID here, but it's not working currently
+    static let temporaryClientID = "ASPBQAggBcUvZJ0kFFBizjYapdjokGMcAzBFoC0xIAYY-4iuJH3NxAgkdUEyQ6oCPQiKNRZaWUogS0d6"
+}
+
+@objc public class BTPayPalCreditMessageView: UIView {
+
+    public weak var delegate: BTPayPalCreditMessageDelegate?
+
     let apiClient: BTAPIClient
 
     /**
@@ -34,13 +37,17 @@ import PayPalMessages
         completion: @escaping (BTPayPalCreditMessageView?, Error?) -> Void
     ) {
         apiClient.fetchOrReturnRemoteConfiguration { configuration, error in
+            if let error {
+                self.delegate?.onError(self, error: error)
+                return
+            }
             guard let configuration else {
-                completion(nil, error)
+                // call delegate?.onError with custom error
                 return
             }
 
             guard let clientID = configuration.json?["paypal"]["clientId"].asString() else {
-                // Completion with custom error
+                // call delegate?.onError with custom error
                 return
             }
 
@@ -63,7 +70,7 @@ import PayPalMessages
                 )
             )
 
-            let messageView = PayPalMessageView(config: messageConfig)
+            let messageView = PayPalMessageView(config: messageConfig, stateDelegate: self, eventDelegate: self)
             messageView.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(messageView)
 
@@ -77,5 +84,30 @@ import PayPalMessages
             completion(self, nil)
             return
         }
+    }
+}
+
+// MARK: - PayPalMessageViewEventDelegate and PayPalMessageViewStateDelegate protocol conformance
+
+extension BTPayPalCreditMessageView: PayPalMessageViewEventDelegate, PayPalMessageViewStateDelegate {
+
+    public func onClick(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
+        delegate?.onClick(self)
+    }
+
+    public func onApply(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
+        delegate?.onApply(self)
+    }
+
+    public func onLoading(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
+        delegate?.onLoading(self)
+    }
+
+    public func onSuccess(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
+        delegate?.onSuccess(self)
+    }
+
+    public func onError(_ paypalMessageView: PayPalMessages.PayPalMessageView, error: PayPalMessages.PayPalMessageError) {
+        delegate?.onError(self, error: error)
     }
 }
