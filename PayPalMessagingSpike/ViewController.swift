@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         let request = BTPayPalCreditMessageRequest()
         request.offerType = .payLaterLongTerm
         request.amount = 2.0
+        request.logoType = .primary
+        request.textAlignment = .center
 
         let payPalMessageView = BTPayPalCreditMessageView(apiClient: apiClient)
         
