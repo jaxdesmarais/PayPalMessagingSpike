@@ -2,7 +2,7 @@ import Foundation
 import PayPalMessages
 
 /// Text alignment option for a PayPal Message
-@objc public enum BTPayPalMessageTextAlignment: Int {
+@objc public enum BTPayPalCreditMessageTextAlignment: Int {
 
     /// Text aligned to the left
     case left

@@ -6,21 +6,25 @@ import Foundation
     public var amount: Double?
 
     /// Message screen location (e.g. product, cart, home)
-    public var placement: BTPayPalMessagePlacement = .none
+    public var placement: BTPayPalCreditMessagePlacement = .none
 
     /// Preferred message offer to display
-    public var offerType: BTPayPalMessageOfferType = .none
+    public var offerType: BTPayPalCreditMessageOfferType = .none
 
     /// Consumer's country (Integrations must be approved by PayPal to use this option)
     public var buyerCountry: String?
 
     /// Logo type option for a PayPal Message
     /// Defaults to `.inline`
-    public var logoType: BTPayPalMessageLogoType = .inline
+    public var logoType: BTPayPalCreditMessageLogoType = .inline
 
     /// Text alignment option for a PayPal Message
     /// Defaults to `.right`
-    public var textAlignment: BTPayPalMessageTextAlignment = .right
+    public var textAlignment: BTPayPalCreditMessageTextAlignment = .right
+
+    /// Text and logo color option for a PayPal Message
+    // Defaults to `.black`
+    public var color: BTPayPalCreditMessageColor = .black
 
 //    // PPCP ONLY IF NEEDED
 //    /// PayPal encrypted merchant ID. For partner integrations only.
@@ -31,11 +35,12 @@ import Foundation
 
     init(
         amount: Double? = nil,
-        placement: BTPayPalMessagePlacement = .none,
-        offerType: BTPayPalMessageOfferType = .none,
+        placement: BTPayPalCreditMessagePlacement = .none,
+        offerType: BTPayPalCreditMessageOfferType = .none,
         buyerCountry: String? = nil,
-        logoType: BTPayPalMessageLogoType = .inline,
-        textAlignment: BTPayPalMessageTextAlignment = .right
+        logoType: BTPayPalCreditMessageLogoType = .inline,
+        textAlignment: BTPayPalCreditMessageTextAlignment = .right,
+        color: BTPayPalCreditMessageColor = .black
     ) {
         self.amount = amount
         self.placement = placement
@@ -43,5 +48,6 @@ import Foundation
         self.buyerCountry = buyerCountry
         self.logoType = logoType
         self.textAlignment = textAlignment
+        self.color = color
     }
 }

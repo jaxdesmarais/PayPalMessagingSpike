@@ -5,7 +5,7 @@ import PayPalMessages
 @objc public class BTPayPalCreditMessageView: UIView {
     private enum Constants {
 
-        //TODO: // ideally we can use our own client ID here, but it's not working currently
+        // TODO: ideally we can use our own client ID here, but it's not working currently
         static let temporaryClientID = "ASPBQAggBcUvZJ0kFFBizjYapdjokGMcAzBFoC0xIAYY-4iuJH3NxAgkdUEyQ6oCPQiKNRZaWUogS0d6"
     }
     
@@ -53,7 +53,7 @@ import PayPalMessages
                 ),
                 style: PayPalMessageStyle(
                     logoType: request?.logoType.logoTypeRawValue ?? .inline,
-                    color: .black,
+                    color: request?.color.messageColorRawValue ?? .black,
                     textAlignment: request?.textAlignment.textAlignmentRawValue ?? .right
                 )
             )

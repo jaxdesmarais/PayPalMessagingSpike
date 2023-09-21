@@ -2,7 +2,7 @@ import Foundation
 import PayPalMessages
 
 /// Preferred message offer to display
-@objc public enum BTPayPalMessageOfferType: Int {
+@objc public enum BTPayPalCreditMessageOfferType: Int {
 
     /// None
     case none

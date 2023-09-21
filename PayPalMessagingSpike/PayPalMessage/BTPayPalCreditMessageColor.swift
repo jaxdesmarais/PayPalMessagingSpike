@@ -1,21 +1,22 @@
 import Foundation
 import PayPalMessages
 
-/// Text alignment option for a PayPal Message
-@objc public enum BTPayPalMessageColor: Int {
+/// Text and logo color option for a PayPal Message
+@objc public enum BTPayPalCreditMessageColor: Int {
 
-    /// None
-    case none
     /// Black text with a color logo
     case black
+
     /// White text with a white logo
     case white
+
     /// Black text with a black logo
     case monochrome
+
     /// Black text with a desaturated logo
     case grayscale
 
-    var offerTypeRawValue: PayPalMessageColor? {
+    var messageColorRawValue: PayPalMessageColor {
         switch self {
         case .black:
             return .black
@@ -25,8 +26,6 @@ import PayPalMessages
             return .monochrome
         case .grayscale:
             return .grayscale
-        default:
-            return nil
         }
     }
 }
