@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
         let payPalMessageView = BTPayPalCreditMessageView(apiClient: apiClient)
         payPalMessageView.delegate = self
-        payPalMessageView.createView(with: request)
+        payPalMessageView.createView(request)
 
         payPalMessageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(payPalMessageView)

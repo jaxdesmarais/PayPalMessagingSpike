@@ -31,7 +31,7 @@ private enum Constants {
     }
   
     // TODO: decide on name for this method
-    @objc public func createView(with request: BTPayPalCreditMessageRequest? = nil) {
+    @objc public func createView(_ request: BTPayPalCreditMessageRequest? = nil) {
         apiClient.fetchOrReturnRemoteConfiguration { configuration, error in
             if let error {
                 self.delegate?.onError(self, error: error)
