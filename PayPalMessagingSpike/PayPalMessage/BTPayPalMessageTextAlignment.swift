@@ -1,10 +1,3 @@
-//
-//  PayPalMessageTextAlignment.swift
-//  PayPalMessagingSpike
-//
-//  Created by Justin Warmkessel on 9/20/23.
-//
-
 import Foundation
 import PayPalMessages
 

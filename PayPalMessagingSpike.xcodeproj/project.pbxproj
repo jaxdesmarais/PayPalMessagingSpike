@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B8EA84FE2ABB7E0100569635 /* PayPalMessages.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EA84FD2ABB7E0100569635 /* PayPalMessages.xcframework */; };
-		B8EA84FF2ABB7E0100569635 /* PayPalMessages.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8EA84FD2ABB7E0100569635 /* PayPalMessages.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B8EA85022ABBB4A300569635 /* BTPayPalMessageTextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85012ABBB4A300569635 /* BTPayPalMessageTextAlignment.swift */; };
 		B8EA85042ABBB5BF00569635 /* BTPayPalMessageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85032ABBB5BF00569635 /* BTPayPalMessageColor.swift */; };
 		B8EA85062ABBB69300569635 /* BTPayPalMessageLogoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85052ABBB69300569635 /* BTPayPalMessageLogoType.swift */; };
@@ -27,6 +25,9 @@
 		BED7C4BE2ABB2D0400EF8550 /* BraintreeSEPADirectDebit in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4BD2ABB2D0400EF8550 /* BraintreeSEPADirectDebit */; };
 		BED7C4C02ABB2D0400EF8550 /* BraintreeThreeDSecure in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4BF2ABB2D0400EF8550 /* BraintreeThreeDSecure */; };
 		BED7C4C22ABB2D0400EF8550 /* BraintreeVenmo in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4C12ABB2D0400EF8550 /* BraintreeVenmo */; };
+		BED7C4C32ABC7B3800EF8550 /* PayPalMessages.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; };
+		BED7C4C42ABC7B3800EF8550 /* PayPalMessages.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BED7C4C52ABC7B4E00EF8550 /* PayPalMessages.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; };
 		BEEE3F592AA8C9CF00B9DBBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F582AA8C9CF00B9DBBD /* AppDelegate.swift */; };
 		BEEE3F5B2AA8C9CF00B9DBBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F5A2AA8C9CF00B9DBBD /* SceneDelegate.swift */; };
 		BEEE3F5D2AA8C9CF00B9DBBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F5C2AA8C9CF00B9DBBD /* ViewController.swift */; };
@@ -42,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B8EA84FF2ABB7E0100569635 /* PayPalMessages.xcframework in Embed Frameworks */,
+				BED7C4C42ABC7B3800EF8550 /* PayPalMessages.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,11 +81,12 @@
 				BED7C4B42ABB2D0400EF8550 /* BraintreeCore in Frameworks */,
 				BED7C4BA2ABB2D0400EF8550 /* BraintreePayPal in Frameworks */,
 				BED7C4C22ABB2D0400EF8550 /* BraintreeVenmo in Frameworks */,
-				B8EA84FE2ABB7E0100569635 /* PayPalMessages.xcframework in Frameworks */,
 				BED7C4AE2ABB2D0400EF8550 /* BraintreeAmericanExpress in Frameworks */,
 				BED7C4B02ABB2D0400EF8550 /* BraintreeApplePay in Frameworks */,
 				BED7C4B22ABB2D0400EF8550 /* BraintreeCard in Frameworks */,
 				BED7C4BC2ABB2D0400EF8550 /* BraintreePayPalNativeCheckout in Frameworks */,
+				BED7C4C32ABC7B3800EF8550 /* PayPalMessages.xcframework in Frameworks */,
+				BED7C4C52ABC7B4E00EF8550 /* PayPalMessages.xcframework in Frameworks */,
 				BED7C4C02ABB2D0400EF8550 /* BraintreeThreeDSecure in Frameworks */,
 				BED7C4BE2ABB2D0400EF8550 /* BraintreeSEPADirectDebit in Frameworks */,
 				BED7C4B62ABB2D0400EF8550 /* BraintreeDataCollector in Frameworks */,

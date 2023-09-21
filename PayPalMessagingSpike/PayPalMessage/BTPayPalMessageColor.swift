@@ -1,17 +1,10 @@
-//
-//  BTPayPalMessageColor.swift
-//  PayPalMessagingSpike
-//
-//  Created by Justin Warmkessel on 9/20/23.
-//
-
 import Foundation
 import PayPalMessages
 
 /// Text alignment option for a PayPal Message
 @objc public enum BTPayPalMessageColor: Int {
 
-    /// Nonce
+    /// None
     case none
     /// Black text with a color logo
     case black

@@ -3,8 +3,9 @@ import BraintreeCore
 import PayPalMessages // merchants will instead import our wrapper module here
 
 class ViewController: UIViewController {
+
     private enum Constants {
-        // Authorizatioin required for APIClient initialization
+        // Authorization required for APIClient initialization
         static let authorization = "sandbox_9dbg82cq_dcpspy2brwdjr3qn"
     }
     
