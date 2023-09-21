@@ -21,24 +21,17 @@ class ViewController: UIViewController {
 
         let payPalMessageView = BTPayPalCreditMessageView(apiClient: apiClient)
         payPalMessageView.delegate = self
+        payPalMessageView.createView(with: request)
 
-        payPalMessageView.createView(with: request) { [weak self] messageView, error in
-            guard let self = self, let messageView = messageView, error == nil else {
-                // do something if there is an error
-                print(error!.localizedDescription)
-                return
-            }
-            
-            messageView.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(messageView)
-            
-            NSLayoutConstraint.activate([
-                messageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-                messageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-                messageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-                messageView.heightAnchor.constraint(equalToConstant: 80)
-            ])
-        }
+        payPalMessageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(payPalMessageView)
+
+        NSLayoutConstraint.activate([
+            payPalMessageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            payPalMessageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            payPalMessageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            payPalMessageView.heightAnchor.constraint(equalToConstant: 80)
+        ])
     }
 }
 

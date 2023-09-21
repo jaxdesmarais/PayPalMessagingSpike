@@ -31,11 +31,7 @@ private enum Constants {
     }
   
     // TODO: decide on name for this method
-    // Do we want to return an error to merchants if we cannot create a view or rely on the messaging delegates?
-    @objc public func createView(
-        with request: BTPayPalCreditMessageRequest? = nil,
-        completion: @escaping (BTPayPalCreditMessageView?, Error?) -> Void
-    ) {
+    @objc public func createView(with request: BTPayPalCreditMessageRequest? = nil) {
         apiClient.fetchOrReturnRemoteConfiguration { configuration, error in
             if let error {
                 self.delegate?.onError(self, error: error)
@@ -81,7 +77,6 @@ private enum Constants {
                 messageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             ])
 
-            completion(self, nil)
             return
         }
     }
