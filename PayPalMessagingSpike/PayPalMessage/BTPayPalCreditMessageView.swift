@@ -4,13 +4,6 @@ import PayPalMessages
 
 @objc public class BTPayPalCreditMessageView: UIView {
     private enum Constants {
-        // Dictionary key used for apiClient for paypal vendor
-        static let paypal = "paypal"
-        
-        // Dictionary key used for apiClient to retrieve the clientId
-        static let clientID = "clientId"
-        
-        static let productionEnvironment = "production"
         
         //TODO: // ideally we can use our own client ID here, but it's not working currently
         static let temporaryClientID = "ASPBQAggBcUvZJ0kFFBizjYapdjokGMcAzBFoC0xIAYY-4iuJH3NxAgkdUEyQ6oCPQiKNRZaWUogS0d6"
@@ -46,7 +39,7 @@ import PayPalMessages
                 return
             }
 
-            guard let clientID = configuration.json?[Constants.paypal][Constants.clientID].asString() else {
+            guard let clientID = configuration.json?["paypal"]["clientId"].asString() else {
                 // Completion with custom error
                 return
             }
@@ -56,7 +49,7 @@ import PayPalMessages
                     clientID: Constants.temporaryClientID , // ideally we can use our own client ID here, but it's not working currently
                     amount: request?.amount,
                     offerType: request?.offerType.offerTypeRawValue,
-                    environment: configuration.environment == Constants.productionEnvironment ? .live : .sandbox
+                    environment: configuration.environment == "production" ? .live : .sandbox
                 ),
                 style: PayPalMessageStyle(
                     logoType: .primary,
