@@ -4,7 +4,7 @@ import PayPalMessages
 /// Preferred message offer to display
 @objc public enum BTPayPalMessageOfferType: Int {
 
-    /// Nonce
+    /// None
     case none
 
     /// Pay Later short term installment

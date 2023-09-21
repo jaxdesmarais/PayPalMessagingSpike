@@ -1,6 +1,7 @@
 import Foundation
 
 @objcMembers public class BTPayPalCreditMessageRequest: NSObject {
+
     /// Price expressed in cents amount based on the current context (i.e. individual product price vs total cart price)
     public var amount: Double?
 

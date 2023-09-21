@@ -1,6 +1,6 @@
 import UIKit
 import BraintreeCore
-import PayPalMessages
+import PayPalMessages // merchants will instead import our wrapper module here
 
 class ViewController: UIViewController {
 

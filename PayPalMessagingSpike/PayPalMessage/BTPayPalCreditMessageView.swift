@@ -16,7 +16,8 @@ import PayPalMessages
         fatalError("init(coder:) has not been implemented")
     }
   
-    // TODO: decide on name
+    // TODO: decide on name for this method
+    // Do we want to return an error to merchants if we cannot create a view or rely on the messaging delegates?
     @objc public func createView(
         with request: BTPayPalCreditMessageRequest? = nil,
         completion: @escaping (Error?) -> Void
