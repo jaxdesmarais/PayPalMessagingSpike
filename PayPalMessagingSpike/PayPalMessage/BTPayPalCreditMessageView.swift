@@ -44,13 +44,18 @@ import PayPalMessages
                 return
             }
 
+            let messageData = PayPalMessageData(
+                clientID: Constants.temporaryClientID , // ideally we can use our own client ID here, but it's not working currently
+                amount: request?.amount,
+                placement: request?.placement.placementRawValue,
+                offerType: request?.offerType.offerTypeRawValue,
+                environment: configuration.environment == "production" ? .live : .sandbox
+            )
+
+            messageData.buyerCountry = request?.buyerCountry
+
             let messageConfig = PayPalMessageConfig(
-                data: PayPalMessageData(
-                    clientID: Constants.temporaryClientID , // ideally we can use our own client ID here, but it's not working currently
-                    amount: request?.amount,
-                    offerType: request?.offerType.offerTypeRawValue,
-                    environment: configuration.environment == "production" ? .live : .sandbox
-                ),
+                data: messageData,
                 style: PayPalMessageStyle(
                     logoType: request?.logoType.logoTypeRawValue ?? .inline,
                     color: request?.color.messageColorRawValue ?? .black,
