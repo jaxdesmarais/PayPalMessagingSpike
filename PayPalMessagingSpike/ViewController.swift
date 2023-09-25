@@ -37,19 +37,19 @@ class ViewController: UIViewController {
 
 extension ViewController: BTPayPalCreditMessageDelegate {
 
-    func onClick(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+    func didSelect(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
         print("DELEGATE: onClick fired")
     }
     
-    func onApply(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+    func willApply(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
         print("DELEGATE: onApply fired")
     }
     
-    func onLoading(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+    func willAppear(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
         print("DELEGATE: onLoading fired")
     }
     
-    func onSuccess(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+    func didAppear(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
         print("DELEGATE: onSuccess fired")
     }
     

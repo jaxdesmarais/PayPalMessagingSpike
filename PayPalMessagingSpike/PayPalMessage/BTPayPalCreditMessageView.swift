@@ -87,19 +87,19 @@ private enum Constants {
 extension BTPayPalCreditMessageView: PayPalMessageViewEventDelegate, PayPalMessageViewStateDelegate {
 
     public func onClick(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
-        delegate?.onClick(self)
+        delegate?.didSelect(self)
     }
 
     public func onApply(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
-        delegate?.onApply(self)
+        delegate?.willApply(self)
     }
 
     public func onLoading(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
-        delegate?.onLoading(self)
+        delegate?.willAppear(self)
     }
 
     public func onSuccess(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
-        delegate?.onSuccess(self)
+        delegate?.didAppear(self)
     }
 
     public func onError(_ paypalMessageView: PayPalMessages.PayPalMessageView, error: PayPalMessages.PayPalMessageError) {
