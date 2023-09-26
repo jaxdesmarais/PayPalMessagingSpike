@@ -2,24 +2,12 @@ import UIKit
 import BraintreeCore
 import PayPalMessages
 
-private enum Constants {
-
-    // TODO: ideally we can use our own client ID here, but it's not working currently
-    static let temporaryClientID = "ASPBQAggBcUvZJ0kFFBizjYapdjokGMcAzBFoC0xIAYY-4iuJH3NxAgkdUEyQ6oCPQiKNRZaWUogS0d6"
-}
-
 @objc public class BTPayPalCreditMessageView: UIView {
 
     public weak var delegate: BTPayPalCreditMessageDelegate?
 
     let apiClient: BTAPIClient
 
-    /**
-     Initializes the PayPalCreditMessage View
-     - Parameters:
-        - apiClient: This class acts as the entry point for accessing the Braintree APIs via common HTTP methods performed on API endpoints. Primarily used to generate the clientID
-     -  Returns: Instance of the BTPayPalCreditMessageView
-    */
     @objc public init(apiClient: BTAPIClient) {
         self.apiClient = apiClient
 
@@ -48,7 +36,7 @@ private enum Constants {
             }
 
             let messageData = PayPalMessageData(
-                clientID: Constants.temporaryClientID , // ideally we can use our own client ID here, but it's not working currently
+                clientID: clientID,
                 amount: request?.amount,
                 placement: request?.placement.placementRawValue,
                 offerType: request?.offerType.offerTypeRawValue,

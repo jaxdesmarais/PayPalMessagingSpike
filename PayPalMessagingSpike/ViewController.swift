@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         request.amount = 2.0
         request.logoType = .primary
         request.textAlignment = .center
+        request.buyerCountry = "US"
 
         let payPalMessageView = BTPayPalCreditMessageView(apiClient: apiClient)
         payPalMessageView.delegate = self
