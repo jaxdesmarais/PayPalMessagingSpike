@@ -10,6 +10,7 @@
 		B8EA85022ABBB4A300569635 /* BTPayPalCreditMessageTextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85012ABBB4A300569635 /* BTPayPalCreditMessageTextAlignment.swift */; };
 		B8EA85042ABBB5BF00569635 /* BTPayPalCreditMessageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85032ABBB5BF00569635 /* BTPayPalCreditMessageColor.swift */; };
 		B8EA85062ABBB69300569635 /* BTPayPalCreditMessageLogoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85052ABBB69300569635 /* BTPayPalCreditMessageLogoType.swift */; };
+		BE0341302B1F7E7C007F2BFC /* PayPalMessages in Frameworks */ = {isa = PBXBuildFile; productRef = BE03412F2B1F7E7C007F2BFC /* PayPalMessages */; };
 		BE0AD9EF2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9EE2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift */; };
 		BE0AD9F12ABB29E600C7CA59 /* BTPayPalCreditMessagePlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9F02ABB29E600C7CA59 /* BTPayPalCreditMessagePlacement.swift */; };
 		BE0AD9F32ABB2AB800C7CA59 /* BTPayPalCreditMessageOfferType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9F22ABB2AB800C7CA59 /* BTPayPalCreditMessageOfferType.swift */; };
@@ -25,10 +26,8 @@
 		BED7C4BE2ABB2D0400EF8550 /* BraintreeSEPADirectDebit in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4BD2ABB2D0400EF8550 /* BraintreeSEPADirectDebit */; };
 		BED7C4C02ABB2D0400EF8550 /* BraintreeThreeDSecure in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4BF2ABB2D0400EF8550 /* BraintreeThreeDSecure */; };
 		BED7C4C22ABB2D0400EF8550 /* BraintreeVenmo in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4C12ABB2D0400EF8550 /* BraintreeVenmo */; };
-		BED7C4C32ABC7B3800EF8550 /* PayPalMessages.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; };
-		BED7C4C42ABC7B3800EF8550 /* PayPalMessages.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BED7C4C52ABC7B4E00EF8550 /* PayPalMessages.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEE3F6D2AA8CA0600B9DBBD /* PayPalMessages.xcframework */; };
 		BED7C4C72ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7C4C62ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift */; };
+		BEDEAF132AC4856A004EA970 /* PayPalCreditMessagingSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDEAF122AC4856A004EA970 /* PayPalCreditMessagingSwiftUIView.swift */; };
 		BEEE3F592AA8C9CF00B9DBBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F582AA8C9CF00B9DBBD /* AppDelegate.swift */; };
 		BEEE3F5B2AA8C9CF00B9DBBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F5A2AA8C9CF00B9DBBD /* SceneDelegate.swift */; };
 		BEEE3F5D2AA8C9CF00B9DBBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F5C2AA8C9CF00B9DBBD /* ViewController.swift */; };
@@ -36,20 +35,6 @@
 		BEEE3F622AA8C9D900B9DBBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEE3F612AA8C9D900B9DBBD /* Assets.xcassets */; };
 		BEEE3F652AA8C9DA00B9DBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEE3F632AA8C9DA00B9DBBD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		B8EA85002ABB7E0100569635 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				BED7C4C42ABC7B3800EF8550 /* PayPalMessages.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B8EA84FD2ABB7E0100569635 /* PayPalMessages.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PayPalMessages.xcframework; path = ../../../Downloads/PayPalMessages.xcframework; sourceTree = "<group>"; };
@@ -63,6 +48,7 @@
 		BE6E013D2AA90EE900170C09 /* PayPalMessages 2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "PayPalMessages 2.xcframework"; path = "../../Downloads/PayPalMessages 2.xcframework"; sourceTree = "<group>"; };
 		BE6E01442AA91FD400170C09 /* PayPalMessages.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PayPalMessages.xcframework; path = "../../Downloads/ios-native-messages-main/PayPalMessages.xcframework"; sourceTree = "<group>"; };
 		BED7C4C62ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessageDelegate.swift; sourceTree = "<group>"; };
+		BEDEAF122AC4856A004EA970 /* PayPalCreditMessagingSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPalCreditMessagingSwiftUIView.swift; sourceTree = "<group>"; };
 		BEEE3F552AA8C9CF00B9DBBD /* PayPalMessagingSpike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayPalMessagingSpike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEE3F582AA8C9CF00B9DBBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEEE3F5A2AA8C9CF00B9DBBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,9 +73,8 @@
 				BED7C4B02ABB2D0400EF8550 /* BraintreeApplePay in Frameworks */,
 				BED7C4B22ABB2D0400EF8550 /* BraintreeCard in Frameworks */,
 				BED7C4BC2ABB2D0400EF8550 /* BraintreePayPalNativeCheckout in Frameworks */,
-				BED7C4C32ABC7B3800EF8550 /* PayPalMessages.xcframework in Frameworks */,
-				BED7C4C52ABC7B4E00EF8550 /* PayPalMessages.xcframework in Frameworks */,
 				BED7C4C02ABB2D0400EF8550 /* BraintreeThreeDSecure in Frameworks */,
+				BE0341302B1F7E7C007F2BFC /* PayPalMessages in Frameworks */,
 				BED7C4BE2ABB2D0400EF8550 /* BraintreeSEPADirectDebit in Frameworks */,
 				BED7C4B62ABB2D0400EF8550 /* BraintreeDataCollector in Frameworks */,
 			);
@@ -136,6 +121,7 @@
 				BEEE3F582AA8C9CF00B9DBBD /* AppDelegate.swift */,
 				BEEE3F5A2AA8C9CF00B9DBBD /* SceneDelegate.swift */,
 				BEEE3F5C2AA8C9CF00B9DBBD /* ViewController.swift */,
+				BEDEAF122AC4856A004EA970 /* PayPalCreditMessagingSwiftUIView.swift */,
 				BEEE3F612AA8C9D900B9DBBD /* Assets.xcassets */,
 				BEEE3F662AA8C9DA00B9DBBD /* Info.plist */,
 				BEEE3F632AA8C9DA00B9DBBD /* LaunchScreen.storyboard */,
@@ -166,7 +152,6 @@
 				BEEE3F512AA8C9CF00B9DBBD /* Sources */,
 				BEEE3F522AA8C9CF00B9DBBD /* Frameworks */,
 				BEEE3F532AA8C9CF00B9DBBD /* Resources */,
-				B8EA85002ABB7E0100569635 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +170,7 @@
 				BED7C4BD2ABB2D0400EF8550 /* BraintreeSEPADirectDebit */,
 				BED7C4BF2ABB2D0400EF8550 /* BraintreeThreeDSecure */,
 				BED7C4C12ABB2D0400EF8550 /* BraintreeVenmo */,
+				BE03412F2B1F7E7C007F2BFC /* PayPalMessages */,
 			);
 			productName = PayPalMessagingSpike;
 			productReference = BEEE3F552AA8C9CF00B9DBBD /* PayPalMessagingSpike.app */;
@@ -216,6 +202,7 @@
 			mainGroup = BEEE3F4C2AA8C9CF00B9DBBD;
 			packageReferences = (
 				BED7C4AC2ABB2D0400EF8550 /* XCRemoteSwiftPackageReference "braintree_ios" */,
+				BE03412E2B1F7E7C007F2BFC /* XCRemoteSwiftPackageReference "paypal-messages-ios" */,
 			);
 			productRefGroup = BEEE3F562AA8C9CF00B9DBBD /* Products */;
 			projectDirPath = "";
@@ -251,6 +238,7 @@
 				BED7C4C72ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift in Sources */,
 				BE0AD9F32ABB2AB800C7CA59 /* BTPayPalCreditMessageOfferType.swift in Sources */,
 				BEEE3F5B2AA8C9CF00B9DBBD /* SceneDelegate.swift in Sources */,
+				BEDEAF132AC4856A004EA970 /* PayPalCreditMessagingSwiftUIView.swift in Sources */,
 				B8EA85022ABBB4A300569635 /* BTPayPalCreditMessageTextAlignment.swift in Sources */,
 				B8EA85042ABBB5BF00569635 /* BTPayPalCreditMessageColor.swift in Sources */,
 				BE0AD9F12ABB29E600C7CA59 /* BTPayPalCreditMessagePlacement.swift in Sources */,
@@ -481,6 +469,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BE03412E2B1F7E7C007F2BFC /* XCRemoteSwiftPackageReference "paypal-messages-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/paypal/paypal-messages-ios";
+			requirement = {
+				kind = exactVersion;
+				version = "1.0.0-prerelease.3";
+			};
+		};
 		BED7C4AC2ABB2D0400EF8550 /* XCRemoteSwiftPackageReference "braintree_ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/braintree/braintree_ios";
@@ -492,6 +488,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BE03412F2B1F7E7C007F2BFC /* PayPalMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE03412E2B1F7E7C007F2BFC /* XCRemoteSwiftPackageReference "paypal-messages-ios" */;
+			productName = PayPalMessages;
+		};
 		BED7C4AD2ABB2D0400EF8550 /* BraintreeAmericanExpress */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BED7C4AC2ABB2D0400EF8550 /* XCRemoteSwiftPackageReference "braintree_ios" */;

@@ -3,16 +3,11 @@ import BraintreeCore
 import PayPalMessages // merchants will instead import our wrapper module here
 
 class ViewController: UIViewController {
-
-    private enum Constants {
-        // Authorization required for APIClient initialization
-        static let authorization = "sandbox_9dbg82cq_dcpspy2brwdjr3qn"
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let apiClient = BTAPIClient(authorization: Constants.authorization)!
+        let apiClient = BTAPIClient(authorization: "sandbox_9dbg82cq_dcpspy2brwdjr3qn")!
         let request = BTPayPalCreditMessageRequest()
         request.offerType = .payLaterLongTerm
         request.amount = 2.0

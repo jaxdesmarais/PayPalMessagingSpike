@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 import BraintreeCore
 import PayPalMessages
 
@@ -6,7 +7,7 @@ import PayPalMessages
 
     public weak var delegate: BTPayPalCreditMessageDelegate?
 
-    let apiClient: BTAPIClient
+    var apiClient: BTAPIClient
 
     @objc public init(apiClient: BTAPIClient) {
         self.apiClient = apiClient
@@ -37,10 +38,10 @@ import PayPalMessages
 
             let messageData = PayPalMessageData(
                 clientID: clientID,
+                environment: configuration.environment == "production" ? .live : .sandbox, 
                 amount: request?.amount,
                 placement: request?.placement.placementRawValue,
-                offerType: request?.offerType.offerTypeRawValue,
-                environment: configuration.environment == "production" ? .live : .sandbox
+                offerType: request?.offerType.offerTypeRawValue
             )
 
             messageData.buyerCountry = request?.buyerCountry
@@ -66,6 +67,30 @@ import PayPalMessages
             ])
 
             return
+        }
+    }
+}
+
+// MARK: - UIViewRepresentable protocol conformance
+
+public extension BTPayPalCreditMessageView {
+
+    struct Representable: UIViewRepresentable {
+
+        private let apiClient: BTAPIClient
+        private var action: () -> Void = { }
+
+        public init(apiClient: BTAPIClient, _ action: @escaping () -> Void = { }) {
+            self.apiClient = apiClient
+            self.action = action
+        }
+
+        public func makeUIView(context: Context) -> BTPayPalCreditMessageView {
+            BTPayPalCreditMessageView(apiClient: apiClient)
+        }
+
+        public func updateUIView(_ view: BTPayPalCreditMessageView, context: Context) {
+            view.apiClient = apiClient
         }
     }
 }
