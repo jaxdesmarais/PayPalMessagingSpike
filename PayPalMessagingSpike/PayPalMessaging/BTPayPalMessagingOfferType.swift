@@ -1,4 +1,4 @@
-import Foundation
+ import Foundation
 import PayPalMessages
 
 /// Preferred message offer to display

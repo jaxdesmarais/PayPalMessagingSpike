@@ -78,15 +78,20 @@ public extension BTPayPalMessagingView {
     struct Representable: UIViewRepresentable {
 
         private let apiClient: BTAPIClient
-        private var action: () -> Void = { }
+        private let request: BTPayPalMessagingRequest?
+        private let delegate: BTPayPalMessagingDelegate?
 
-        public init(apiClient: BTAPIClient, _ action: @escaping () -> Void = { }) {
+        public init(apiClient: BTAPIClient, request: BTPayPalMessagingRequest? = nil, delegate: BTPayPalMessagingDelegate? = nil) {
             self.apiClient = apiClient
-            self.action = action
+            self.request = request
+            self.delegate = delegate
         }
 
         public func makeUIView(context: Context) -> BTPayPalMessagingView {
-            BTPayPalMessagingView(apiClient: apiClient)
+            let payPalMessagingView = BTPayPalMessagingView(apiClient: apiClient)
+            payPalMessagingView.createView(request)
+            payPalMessagingView.delegate = delegate
+            return payPalMessagingView
         }
 
         public func updateUIView(_ view: BTPayPalMessagingView, context: Context) {
