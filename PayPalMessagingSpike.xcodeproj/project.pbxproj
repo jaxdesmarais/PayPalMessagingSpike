@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B8EA85022ABBB4A300569635 /* BTPayPalCreditMessageTextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85012ABBB4A300569635 /* BTPayPalCreditMessageTextAlignment.swift */; };
-		B8EA85042ABBB5BF00569635 /* BTPayPalCreditMessageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85032ABBB5BF00569635 /* BTPayPalCreditMessageColor.swift */; };
-		B8EA85062ABBB69300569635 /* BTPayPalCreditMessageLogoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85052ABBB69300569635 /* BTPayPalCreditMessageLogoType.swift */; };
+		B8EA85022ABBB4A300569635 /* BTPayPalMessagingTextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85012ABBB4A300569635 /* BTPayPalMessagingTextAlignment.swift */; };
+		B8EA85042ABBB5BF00569635 /* BTPayPalMessagingColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85032ABBB5BF00569635 /* BTPayPalMessagingColor.swift */; };
+		B8EA85062ABBB69300569635 /* BTPayPalMessagingLogoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA85052ABBB69300569635 /* BTPayPalMessagingLogoType.swift */; };
 		BE0341302B1F7E7C007F2BFC /* PayPalMessages in Frameworks */ = {isa = PBXBuildFile; productRef = BE03412F2B1F7E7C007F2BFC /* PayPalMessages */; };
-		BE0AD9EF2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9EE2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift */; };
-		BE0AD9F12ABB29E600C7CA59 /* BTPayPalCreditMessagePlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9F02ABB29E600C7CA59 /* BTPayPalCreditMessagePlacement.swift */; };
-		BE0AD9F32ABB2AB800C7CA59 /* BTPayPalCreditMessageOfferType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9F22ABB2AB800C7CA59 /* BTPayPalCreditMessageOfferType.swift */; };
-		BE0AD9F62ABB2BAD00C7CA59 /* BTPayPalCreditMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9F52ABB2BAD00C7CA59 /* BTPayPalCreditMessageView.swift */; };
+		BE0AD9EF2ABB297B00C7CA59 /* BTPayPalMessagingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9EE2ABB297B00C7CA59 /* BTPayPalMessagingRequest.swift */; };
+		BE0AD9F12ABB29E600C7CA59 /* BTPayPalMessagingPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9F02ABB29E600C7CA59 /* BTPayPalMessagingPlacement.swift */; };
+		BE0AD9F32ABB2AB800C7CA59 /* BTPayPalMessagingOfferType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9F22ABB2AB800C7CA59 /* BTPayPalMessagingOfferType.swift */; };
+		BE0AD9F62ABB2BAD00C7CA59 /* BTPayPalMessagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AD9F52ABB2BAD00C7CA59 /* BTPayPalMessagingView.swift */; };
 		BED7C4AE2ABB2D0400EF8550 /* BraintreeAmericanExpress in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4AD2ABB2D0400EF8550 /* BraintreeAmericanExpress */; };
 		BED7C4B02ABB2D0400EF8550 /* BraintreeApplePay in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4AF2ABB2D0400EF8550 /* BraintreeApplePay */; };
 		BED7C4B22ABB2D0400EF8550 /* BraintreeCard in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4B12ABB2D0400EF8550 /* BraintreeCard */; };
@@ -26,7 +26,7 @@
 		BED7C4BE2ABB2D0400EF8550 /* BraintreeSEPADirectDebit in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4BD2ABB2D0400EF8550 /* BraintreeSEPADirectDebit */; };
 		BED7C4C02ABB2D0400EF8550 /* BraintreeThreeDSecure in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4BF2ABB2D0400EF8550 /* BraintreeThreeDSecure */; };
 		BED7C4C22ABB2D0400EF8550 /* BraintreeVenmo in Frameworks */ = {isa = PBXBuildFile; productRef = BED7C4C12ABB2D0400EF8550 /* BraintreeVenmo */; };
-		BED7C4C72ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7C4C62ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift */; };
+		BED7C4C72ABC89D300EF8550 /* BTPayPalMessagingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7C4C62ABC89D300EF8550 /* BTPayPalMessagingDelegate.swift */; };
 		BEDEAF132AC4856A004EA970 /* PayPalCreditMessagingSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDEAF122AC4856A004EA970 /* PayPalCreditMessagingSwiftUIView.swift */; };
 		BEEE3F592AA8C9CF00B9DBBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F582AA8C9CF00B9DBBD /* AppDelegate.swift */; };
 		BEEE3F5B2AA8C9CF00B9DBBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE3F5A2AA8C9CF00B9DBBD /* SceneDelegate.swift */; };
@@ -38,16 +38,16 @@
 
 /* Begin PBXFileReference section */
 		B8EA84FD2ABB7E0100569635 /* PayPalMessages.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PayPalMessages.xcframework; path = ../../../Downloads/PayPalMessages.xcframework; sourceTree = "<group>"; };
-		B8EA85012ABBB4A300569635 /* BTPayPalCreditMessageTextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessageTextAlignment.swift; sourceTree = "<group>"; };
-		B8EA85032ABBB5BF00569635 /* BTPayPalCreditMessageColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessageColor.swift; sourceTree = "<group>"; };
-		B8EA85052ABBB69300569635 /* BTPayPalCreditMessageLogoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessageLogoType.swift; sourceTree = "<group>"; };
-		BE0AD9EE2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessageRequest.swift; sourceTree = "<group>"; };
-		BE0AD9F02ABB29E600C7CA59 /* BTPayPalCreditMessagePlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessagePlacement.swift; sourceTree = "<group>"; };
-		BE0AD9F22ABB2AB800C7CA59 /* BTPayPalCreditMessageOfferType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessageOfferType.swift; sourceTree = "<group>"; };
-		BE0AD9F52ABB2BAD00C7CA59 /* BTPayPalCreditMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessageView.swift; sourceTree = "<group>"; };
+		B8EA85012ABBB4A300569635 /* BTPayPalMessagingTextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalMessagingTextAlignment.swift; sourceTree = "<group>"; };
+		B8EA85032ABBB5BF00569635 /* BTPayPalMessagingColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalMessagingColor.swift; sourceTree = "<group>"; };
+		B8EA85052ABBB69300569635 /* BTPayPalMessagingLogoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalMessagingLogoType.swift; sourceTree = "<group>"; };
+		BE0AD9EE2ABB297B00C7CA59 /* BTPayPalMessagingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalMessagingRequest.swift; sourceTree = "<group>"; };
+		BE0AD9F02ABB29E600C7CA59 /* BTPayPalMessagingPlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalMessagingPlacement.swift; sourceTree = "<group>"; };
+		BE0AD9F22ABB2AB800C7CA59 /* BTPayPalMessagingOfferType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalMessagingOfferType.swift; sourceTree = "<group>"; };
+		BE0AD9F52ABB2BAD00C7CA59 /* BTPayPalMessagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalMessagingView.swift; sourceTree = "<group>"; };
 		BE6E013D2AA90EE900170C09 /* PayPalMessages 2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "PayPalMessages 2.xcframework"; path = "../../Downloads/PayPalMessages 2.xcframework"; sourceTree = "<group>"; };
 		BE6E01442AA91FD400170C09 /* PayPalMessages.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PayPalMessages.xcframework; path = "../../Downloads/ios-native-messages-main/PayPalMessages.xcframework"; sourceTree = "<group>"; };
-		BED7C4C62ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalCreditMessageDelegate.swift; sourceTree = "<group>"; };
+		BED7C4C62ABC89D300EF8550 /* BTPayPalMessagingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPayPalMessagingDelegate.swift; sourceTree = "<group>"; };
 		BEDEAF122AC4856A004EA970 /* PayPalCreditMessagingSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPalCreditMessagingSwiftUIView.swift; sourceTree = "<group>"; };
 		BEEE3F552AA8C9CF00B9DBBD /* PayPalMessagingSpike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayPalMessagingSpike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEE3F582AA8C9CF00B9DBBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,19 +83,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE0AD9F42ABB2B4000C7CA59 /* PayPalMessage */ = {
+		BE0AD9F42ABB2B4000C7CA59 /* PayPalMessaging */ = {
 			isa = PBXGroup;
 			children = (
-				B8EA85032ABBB5BF00569635 /* BTPayPalCreditMessageColor.swift */,
-				BED7C4C62ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift */,
-				B8EA85052ABBB69300569635 /* BTPayPalCreditMessageLogoType.swift */,
-				BE0AD9F22ABB2AB800C7CA59 /* BTPayPalCreditMessageOfferType.swift */,
-				BE0AD9F02ABB29E600C7CA59 /* BTPayPalCreditMessagePlacement.swift */,
-				BE0AD9EE2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift */,
-				B8EA85012ABBB4A300569635 /* BTPayPalCreditMessageTextAlignment.swift */,
-				BE0AD9F52ABB2BAD00C7CA59 /* BTPayPalCreditMessageView.swift */,
+				B8EA85032ABBB5BF00569635 /* BTPayPalMessagingColor.swift */,
+				BED7C4C62ABC89D300EF8550 /* BTPayPalMessagingDelegate.swift */,
+				B8EA85052ABBB69300569635 /* BTPayPalMessagingLogoType.swift */,
+				BE0AD9F22ABB2AB800C7CA59 /* BTPayPalMessagingOfferType.swift */,
+				BE0AD9F02ABB29E600C7CA59 /* BTPayPalMessagingPlacement.swift */,
+				BE0AD9EE2ABB297B00C7CA59 /* BTPayPalMessagingRequest.swift */,
+				B8EA85012ABBB4A300569635 /* BTPayPalMessagingTextAlignment.swift */,
+				BE0AD9F52ABB2BAD00C7CA59 /* BTPayPalMessagingView.swift */,
 			);
-			path = PayPalMessage;
+			path = PayPalMessaging;
 			sourceTree = "<group>";
 		};
 		BEEE3F4C2AA8C9CF00B9DBBD = {
@@ -126,7 +126,7 @@
 				BEEE3F662AA8C9DA00B9DBBD /* Info.plist */,
 				BEEE3F632AA8C9DA00B9DBBD /* LaunchScreen.storyboard */,
 				BEEE3F5E2AA8C9CF00B9DBBD /* Main.storyboard */,
-				BE0AD9F42ABB2B4000C7CA59 /* PayPalMessage */,
+				BE0AD9F42ABB2B4000C7CA59 /* PayPalMessaging */,
 			);
 			path = PayPalMessagingSpike;
 			sourceTree = "<group>";
@@ -232,17 +232,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEEE3F5D2AA8C9CF00B9DBBD /* ViewController.swift in Sources */,
-				BE0AD9F62ABB2BAD00C7CA59 /* BTPayPalCreditMessageView.swift in Sources */,
+				BE0AD9F62ABB2BAD00C7CA59 /* BTPayPalMessagingView.swift in Sources */,
 				BEEE3F592AA8C9CF00B9DBBD /* AppDelegate.swift in Sources */,
-				BE0AD9EF2ABB297B00C7CA59 /* BTPayPalCreditMessageRequest.swift in Sources */,
-				BED7C4C72ABC89D300EF8550 /* BTPayPalCreditMessageDelegate.swift in Sources */,
-				BE0AD9F32ABB2AB800C7CA59 /* BTPayPalCreditMessageOfferType.swift in Sources */,
+				BE0AD9EF2ABB297B00C7CA59 /* BTPayPalMessagingRequest.swift in Sources */,
+				BED7C4C72ABC89D300EF8550 /* BTPayPalMessagingDelegate.swift in Sources */,
+				BE0AD9F32ABB2AB800C7CA59 /* BTPayPalMessagingOfferType.swift in Sources */,
 				BEEE3F5B2AA8C9CF00B9DBBD /* SceneDelegate.swift in Sources */,
 				BEDEAF132AC4856A004EA970 /* PayPalCreditMessagingSwiftUIView.swift in Sources */,
-				B8EA85022ABBB4A300569635 /* BTPayPalCreditMessageTextAlignment.swift in Sources */,
-				B8EA85042ABBB5BF00569635 /* BTPayPalCreditMessageColor.swift in Sources */,
-				BE0AD9F12ABB29E600C7CA59 /* BTPayPalCreditMessagePlacement.swift in Sources */,
-				B8EA85062ABBB69300569635 /* BTPayPalCreditMessageLogoType.swift in Sources */,
+				B8EA85022ABBB4A300569635 /* BTPayPalMessagingTextAlignment.swift in Sources */,
+				B8EA85042ABBB5BF00569635 /* BTPayPalMessagingColor.swift in Sources */,
+				BE0AD9F12ABB29E600C7CA59 /* BTPayPalMessagingPlacement.swift in Sources */,
+				B8EA85062ABBB69300569635 /* BTPayPalMessagingLogoType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

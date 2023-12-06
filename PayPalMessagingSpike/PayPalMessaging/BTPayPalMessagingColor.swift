@@ -2,7 +2,7 @@ import Foundation
 import PayPalMessages
 
 /// Text and logo color option for a PayPal Message
-@objc public enum BTPayPalCreditMessageColor: Int {
+@objc public enum BTPayPalMessagingColor: Int {
 
     /// Black text with a color logo
     case black

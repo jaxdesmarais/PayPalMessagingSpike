@@ -8,14 +8,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let apiClient = BTAPIClient(authorization: "sandbox_9dbg82cq_dcpspy2brwdjr3qn")!
-        let request = BTPayPalCreditMessageRequest()
+        let request = BTPayPalMessagingRequest()
         request.offerType = .payLaterLongTerm
         request.amount = 2.0
         request.logoType = .primary
         request.textAlignment = .center
         request.buyerCountry = "US"
 
-        let payPalMessageView = BTPayPalCreditMessageView(apiClient: apiClient)
+        let payPalMessageView = BTPayPalMessagingView(apiClient: apiClient)
         payPalMessageView.delegate = self
         payPalMessageView.createView(request)
 
@@ -31,25 +31,25 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: BTPayPalCreditMessageDelegate {
+extension ViewController: BTPayPalMessagingDelegate {
 
-    func didSelect(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+    func didSelect(_ payPalCreditMessageView: BTPayPalMessagingView) {
         print("DELEGATE: onClick fired")
     }
     
-    func willApply(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+    func willApply(_ payPalCreditMessageView: BTPayPalMessagingView) {
         print("DELEGATE: onApply fired")
     }
     
-    func willAppear(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+    func willAppear(_ payPalCreditMessageView: BTPayPalMessagingView) {
         print("DELEGATE: onLoading fired")
     }
     
-    func didAppear(_ payPalCreditMessageView: BTPayPalCreditMessageView) {
+    func didAppear(_ payPalCreditMessageView: BTPayPalMessagingView) {
         print("DELEGATE: onSuccess fired")
     }
     
-    func onError(_ payPalCreditMessageView: BTPayPalCreditMessageView, error: Error) {
+    func onError(_ payPalCreditMessageView: BTPayPalMessagingView, error: Error) {
         print("DELEGATE: onError fired with \(error.localizedDescription)")
     }
 }

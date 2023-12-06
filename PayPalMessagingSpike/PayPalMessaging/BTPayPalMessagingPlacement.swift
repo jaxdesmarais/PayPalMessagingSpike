@@ -2,7 +2,7 @@ import Foundation
 import PayPalMessages
 
 /// Message location within an application
-@objc public enum BTPayPalCreditMessagePlacement: Int {
+@objc public enum BTPayPalMessagingPlacement: Int {
 
     /// None
     case none

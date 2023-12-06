@@ -3,9 +3,9 @@ import SwiftUI
 import BraintreeCore
 import PayPalMessages
 
-@objc public class BTPayPalCreditMessageView: UIView {
+@objc public class BTPayPalMessagingView: UIView {
 
-    public weak var delegate: BTPayPalCreditMessageDelegate?
+    public weak var delegate: BTPayPalMessagingDelegate?
 
     var apiClient: BTAPIClient
 
@@ -20,7 +20,7 @@ import PayPalMessages
     }
   
     // TODO: decide on name for this method
-    @objc public func createView(_ request: BTPayPalCreditMessageRequest? = nil) {
+    @objc public func createView(_ request: BTPayPalMessagingRequest? = nil) {
         apiClient.fetchOrReturnRemoteConfiguration { configuration, error in
             if let error {
                 self.delegate?.onError(self, error: error)
@@ -73,7 +73,7 @@ import PayPalMessages
 
 // MARK: - UIViewRepresentable protocol conformance
 
-public extension BTPayPalCreditMessageView {
+public extension BTPayPalMessagingView {
 
     struct Representable: UIViewRepresentable {
 
@@ -85,11 +85,11 @@ public extension BTPayPalCreditMessageView {
             self.action = action
         }
 
-        public func makeUIView(context: Context) -> BTPayPalCreditMessageView {
-            BTPayPalCreditMessageView(apiClient: apiClient)
+        public func makeUIView(context: Context) -> BTPayPalMessagingView {
+            BTPayPalMessagingView(apiClient: apiClient)
         }
 
-        public func updateUIView(_ view: BTPayPalCreditMessageView, context: Context) {
+        public func updateUIView(_ view: BTPayPalMessagingView, context: Context) {
             view.apiClient = apiClient
         }
     }
@@ -97,7 +97,7 @@ public extension BTPayPalCreditMessageView {
 
 // MARK: - PayPalMessageViewEventDelegate and PayPalMessageViewStateDelegate protocol conformance
 
-extension BTPayPalCreditMessageView: PayPalMessageViewEventDelegate, PayPalMessageViewStateDelegate {
+extension BTPayPalMessagingView: PayPalMessageViewEventDelegate, PayPalMessageViewStateDelegate {
 
     public func onClick(_ paypalMessageView: PayPalMessages.PayPalMessageView) {
         delegate?.didSelect(self)

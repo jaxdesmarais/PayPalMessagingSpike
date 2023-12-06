@@ -1,30 +1,30 @@
 import Foundation
 
-@objcMembers public class BTPayPalCreditMessageRequest: NSObject {
+@objcMembers public class BTPayPalMessagingRequest: NSObject {
 
     /// Price expressed in cents amount based on the current context (i.e. individual product price vs total cart price)
     public var amount: Double?
 
     /// Message screen location (e.g. product, cart, home)
-    public var placement: BTPayPalCreditMessagePlacement = .none
+    public var placement: BTPayPalMessagingPlacement = .none
 
     /// Preferred message offer to display
-    public var offerType: BTPayPalCreditMessageOfferType = .none
+    public var offerType: BTPayPalMessagingOfferType = .none
 
     /// Consumer's country (Integrations must be approved by PayPal to use this option)
     public var buyerCountry: String?
 
     /// Logo type option for a PayPal Message
     /// Defaults to `.inline`
-    public var logoType: BTPayPalCreditMessageLogoType = .inline
+    public var logoType: BTPayPalMessagingLogoType = .inline
 
     /// Text alignment option for a PayPal Message
     /// Defaults to `.right`
-    public var textAlignment: BTPayPalCreditMessageTextAlignment = .right
+    public var textAlignment: BTPayPalMessagingTextAlignment = .right
 
     /// Text and logo color option for a PayPal Message
     // Defaults to `.black`
-    public var color: BTPayPalCreditMessageColor = .black
+    public var color: BTPayPalMessagingColor = .black
 
 //    // PPCP ONLY IF NEEDED
 //    /// PayPal encrypted merchant ID. For partner integrations only.
@@ -35,12 +35,12 @@ import Foundation
 
     init(
         amount: Double? = nil,
-        placement: BTPayPalCreditMessagePlacement = .none,
-        offerType: BTPayPalCreditMessageOfferType = .none,
+        placement: BTPayPalMessagingPlacement = .none,
+        offerType: BTPayPalMessagingOfferType = .none,
         buyerCountry: String? = nil,
-        logoType: BTPayPalCreditMessageLogoType = .inline,
-        textAlignment: BTPayPalCreditMessageTextAlignment = .right,
-        color: BTPayPalCreditMessageColor = .black
+        logoType: BTPayPalMessagingLogoType = .inline,
+        textAlignment: BTPayPalMessagingTextAlignment = .right,
+        color: BTPayPalMessagingColor = .black
     ) {
         self.amount = amount
         self.placement = placement

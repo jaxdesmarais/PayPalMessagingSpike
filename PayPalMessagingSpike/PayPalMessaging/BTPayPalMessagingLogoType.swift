@@ -2,7 +2,7 @@ import Foundation
 import PayPalMessages
 
 /// Logo type option for a PayPal Message
-@objc public enum BTPayPalCreditMessageLogoType: Int {
+@objc public enum BTPayPalMessagingLogoType: Int {
 
     /// PayPal logo positioned inline within the message
     case inline

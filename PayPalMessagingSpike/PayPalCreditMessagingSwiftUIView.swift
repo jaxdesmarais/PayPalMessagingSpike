@@ -4,7 +4,7 @@ import PayPalMessages // merchants will instead import our wrapper module here
 
 struct PayPalCreditMessagingSwiftUIView: View {
 
-    let request = BTPayPalCreditMessageRequest(
+    let request = BTPayPalMessagingRequest(
         amount: 2.0,
         offerType: .payLaterLongTerm,
         buyerCountry: "US",
